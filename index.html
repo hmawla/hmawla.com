@@ -26,7 +26,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="/"><img src="img/default_cropped_small.png" alt=""></a>
+					<a class="navbar-brand logo_h" href="#home"><img src="img/default_cropped_small.png" alt=""></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -35,28 +35,8 @@
 					</button>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-							<!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> -->
-							<!-- <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-							<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li> -->
-							<!-- <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+						<ul class="nav navbar-nav menu_nav justify-content-center">
+							<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
 						</ul>
 					</div>
 				</div>
@@ -67,14 +47,14 @@
 
 	<!--================ Start Home Banner Area =================-->
 	<section class="home_banner_area">
-		<div class="banner_inner">
+		<div id="home" class="banner_inner">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="banner_content">
 							<h3 class="text-uppercase">Hello</h3>
 							<h2 class="text-uppercase">I am Hussein Al Mawla</h2>
-							<h5 class="text-uppercase">senior developer</h5>
+							<h5 class="text-uppercase">senior software engineer</h5>
 							<div class="d-flex align-items-center">
 								<a class="primary_btn" href="mailto:info@hmawla.com"><span>Hire Me</span></a>
 								<a class="primary_btn tr-bg" href="HusseinAlMawla-CV.pdf" target="_blank"><span>Get CV</span></a>
@@ -113,9 +93,9 @@
 						</p>
 						<p>
 							I started learning and understanding computers a long time ago, until I found my passion in
-							development by starting with basic programming ways. Which included but wasn't limited to learning events and triggers in
-							games, and coding in shell scripts and MS Small Basic. Up until this day I have accumulated knowledge
-							and expertise in the field of web and app development for most platforms.
+							development. With time, I was able to develop my skills and refine them, which allowed me to start pursuing my own
+							projects full time.
+							So far, I've created and developed multiple high-budget websites and apps. You can view these apps in my portfolio.
 						</p>
 						<a class="primary_btn" href="HusseinAlMawla-CV.pdf"  target="_blank"><span>Download CV</span></a>
 					</div>
@@ -225,7 +205,7 @@
 								<a href="tel:0096171321357"><span class="fa fa-phone"></span></a>
 							</div>
 							<div class="ml-15">
-								<p>call now</p>
+								<p><a href="tel:0096171321357">call now</p></a>
 								<h3>(+961)-71-321357</h3>
 							</div>
 						</div>
@@ -259,7 +239,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="feature_item">
 						<img src="img/services/s2.png" alt="">
-						<h4>UI/ux design</h4>
+						<h4>UI/UX design</h4>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -271,7 +251,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="feature_item">
 						<img src="img/services/s4.png" alt="">
-						<h4>seo optimize</h4>
+						<h4>seo optimization</h4>
 					</div>
 				</div>
 			</div>
@@ -279,145 +259,6 @@
 	</section>
 	<!--================ End Features Area =================-->
 
-	<!--================Start Portfolio Area =================-->
-	<!-- <section class="portfolio_area" id="portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="main_title text-left">
-						<h2>quality work <br>
-							Recently done project </h2>
-					</div>
-				</div>
-			</div>
-			<div class="filters portfolio-filter">
-				<ul>
-					<li class="active" data-filter="*">all</li>
-					<li data-filter=".popular">popular</li>
-					<li data-filter=".latest"> latest</li>
-				</ul>
-			</div>
-
-			<div class="filters-content">
-				<div class="row portfolio-grid justify-content-center">
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p1.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p1.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">MTS Webstore</a></h4>
-								<p>A store of most technological equipments</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p3.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p3.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">MTS Pocket Cards</a></h4>
-								<p>Voucher selling app</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all popular latest">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p2.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p2.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">WaynYo</a></h4>
-								<p>Location based social platform</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 all">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p4.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p4.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">Mawla Telecom</a></h4>
-								<p>Portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p5.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p5.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">Mawla Telecom Products</a></h4>
-								<p>Pricelist app</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!--================End Portfolio Area =================-->
-
-	<!--================ Start Newsletter Area =================-->
-	<!-- <section class="newsletter_area">
-		<div class="container">
-			<div class="row justify-content-center align-items-center">
-				<div class="col-lg-12">
-					<div class="subscription_box text-center">
-						<h2 class="text-uppercase text-white">get update from anywhere</h2>
-						<p class="text-white">
-							News, news everywhere.
-						</p>
-						<div class="subcribe-form" id="mc_embed_signup">
-							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscription relative">
-								<input name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required="" type="email">
-								<div style="position: absolute; left: -5000px;">
-									<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-								</div>
-								<button class="primary-btn hover d-inline">Get Started</button>
-								<div class="info"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!--================ End Newsletter Area =================-->
 
 	<!--================Footer Area =================-->
 	<footer class="footer_area">
@@ -442,7 +283,8 @@
 			<div class="row footer_bottom justify-content-center">
 				<p class="col-lg-8 col-sm-12 footer-text">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All Rights Reserved <br>
+					<small>Powered by <img data-v-057b1d0d="" src="https://untitled-developers-public.s3.eu-west-3.amazonaws.com/public/CopyRighLogo.png" alt="" style="object-fit: contain; height: 12px; width: auto;"></small>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 			</div>
 		</div>
