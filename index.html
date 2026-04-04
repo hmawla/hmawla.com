@@ -1,332 +1,486 @@
-<!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <link rel="icon" href="img/favicon.png" type="image/png"> -->
-    <title>Hussein Al Mawla | Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="vendors/linericon/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Primary Meta Tags -->
+    <title>Hussein Al Mawla — Senior Software Engineer | Full Stack Developer</title>
+    <meta name="title" content="Hussein Al Mawla — Senior Software Engineer | Full Stack Developer">
+    <meta name="description" content="Hussein Al Mawla is a senior software engineer and full stack developer specializing in web, native, and hybrid app development with expert quality assurance. View portfolio and services.">
+    <meta name="keywords" content="Hussein Al Mawla, software engineer, full stack developer, web development, app development, UI/UX design, SEO optimization, Lebanon, hmawla">
+    <meta name="author" content="Hussein Al Mawla">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hmawla.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hmawla.com/">
+    <meta property="og:title" content="Hussein Al Mawla — Senior Software Engineer | Full Stack Developer">
+    <meta property="og:description" content="Senior software engineer specializing in web, native, and hybrid app development. View portfolio, services, and get in touch.">
+    <meta property="og:image" content="https://hmawla.com/img/default_cropped.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="H.Mawla — Senior Software Engineer">
+    <meta property="og:site_name" content="H.Mawla">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://hmawla.com/">
+    <meta name="twitter:title" content="Hussein Al Mawla — Senior Software Engineer | Full Stack Developer">
+    <meta name="twitter:description" content="Senior software engineer specializing in web, native, and hybrid app development. View portfolio, services, and get in touch.">
+    <meta name="twitter:image" content="https://hmawla.com/img/default_cropped.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/default_cropped.png">
+
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/modern.css">
+
+    <!-- Person & Organization Schema (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hussein Al Mawla",
+        "alternateName": "H.Mawla",
+        "url": "https://hmawla.com",
+        "image": "https://hmawla.com/img/default_cropped.png",
+        "jobTitle": "Senior Software Engineer",
+        "description": "Full stack developer specializing in web, native, and hybrid app development with expert quality assurance.",
+        "email": "mailto:info@hmawla.com",
+        "telephone": "+96171321357",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "LB"
+        },
+        "sameAs": [
+            "https://www.facebook.com/hsynmawla",
+            "https://www.instagram.com/hmawla.dev/",
+            "https://www.linkedin.com/in/hmawla/",
+            "https://github.com/hmawla"
+        ],
+        "knowsAbout": [
+            "Web Development",
+            "Mobile App Development",
+            "UI/UX Design",
+            "SEO Optimization",
+            "Full Stack Development",
+            "Quality Assurance"
+        ],
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "App Development",
+                    "description": "Native and hybrid mobile application development"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "UI/UX Design",
+                    "description": "User interface and user experience design"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Web Development",
+                    "description": "Full stack web application development"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "SEO Optimization",
+                    "description": "Search engine optimization services"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- WebSite Schema for sitelinks search -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "H.Mawla",
+        "alternateName": "Hussein Al Mawla Portfolio",
+        "url": "https://hmawla.com"
+    }
+    </script>
 </head>
 
 <body>
 
-<!--================ Start Header Area =================-->
-<header class="header_area">
-    <div class="main_menu">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="#home"><img src="img/default_cropped_small.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav menu_nav justify-content-center">
-                        <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="#services">Services</a></li>
-
-                    </ul>
-                </div>
+<!-- ============ Navigation ============ -->
+<header class="nav-header" id="nav-header" role="banner">
+    <div class="container">
+        <nav class="nav-inner" aria-label="Main navigation">
+            <a href="#home" class="nav-logo" aria-label="H.Mawla — Home">
+                <img src="img/default_cropped_small.png" alt="H.Mawla logo" width="120" height="36">
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links" role="menubar">
+                <a href="#home" class="active" role="menuitem">Home</a>
+                <a href="#about" role="menuitem">About</a>
+                <a href="#portfolio" role="menuitem">Portfolio</a>
+                <a href="#services" role="menuitem">Services</a>
+                <a href="mailto:info@hmawla.com" role="menuitem">Contact</a>
             </div>
         </nav>
     </div>
 </header>
-<!--================ End Header Area =================-->
 
-<!--================ Start Home Banner Area =================-->
-<section class="home_banner_area">
-    <div id="home" class="banner_inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="banner_content">
-                        <h3 class="text-uppercase">Hello</h3>
-                        <h2 class="text-uppercase">I am Hussein Al Mawla</h2>
-                        <h5 class="text-uppercase">senior software engineer</h5>
-                        <div class="d-flex align-items-center">
-                            <a class="primary_btn" href="mailto:info@hmawla.com" target="_blank"><span>Contact me</span></a>
-                            <a class="primary_btn tr-bg" href="HusseinAlMawla-CV.pdf"
-                               target="_blank"><span>Get CV</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="home_right_img">
-                        <img class="" src="img/banner/home-right.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================ End Home Banner Area =================-->
-
-<!--================ Start About Us Area =================-->
-<section class="about_area section_gap">
+<!-- ============ Hero Section ============ -->
+<section class="hero section" id="home" aria-label="Introduction">
+    <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
     <div class="container">
-        <div class="row justify-content-start align-items-center">
-            <div class="col-lg-5">
-                <div class="about_img">
-                    <img class="" src="img/about-us.png" alt="">
+        <div class="hero-grid">
+            <div class="hero-content reveal">
+                <h3>Hello</h3>
+                <h1>I am Hussein Al Mawla</h1>
+                <h2>senior software engineer</h2>
+                <div class="hero-cta">
+                    <a href="mailto:info@hmawla.com" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Contact me
+                    </a>
+                    <a href="HusseinAlMawla-CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Get CV
+                    </a>
                 </div>
             </div>
-
-            <div class="offset-lg-1 col-lg-5">
-                <div class="main_title text-left">
-                    <h2>Let me <br>
-                        Introduce <br>
-                        Myself</h2>
-                    <p>
-                        I am a full stack developer who handles projects in almost any domain; bearing knowledge in
-                        web, native, and hybrid development with expert quality assurance.
-                    </p>
-                    <p>
-                        I started learning and understanding computers a long time ago, until I found my passion in
-                        development. With time, I was able to develop my skills and refine them, which allowed me to
-                        start pursuing my own
-                        projects full time.
-                        So far, I've created and developed multiple high-budget websites and apps. You can view these
-                        apps in my portfolio.
-                    </p>
-                    <a class="primary_btn" href="HusseinAlMawla-CV.pdf" target="_blank"><span>Download CV</span></a>
+            <div class="hero-terminal glass terminal-block reveal" aria-label="Terminal style introduction">
+                <div class="terminal-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================ End About Us Area =================-->
-
-<!--================ Srart Brand Area =================-->
-<section class="brand_area section_gap_bottom">
-    <div id="portfolio">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://play.google.com/store/apps/details?id=com.softrasys.eyemanager.app"
-                               target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/softrasys.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://teliaplus.com" target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/telia-logo.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://play.google.com/store/apps/details?id=com.classmobileapp.android&hl=en&gl=US&pli=1"
-                               target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/logo5.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://play.google.com/store/apps/details?id=app.picwallet.android"
-                               target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/PiC.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://theconceptmart.com" target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/theconcept.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://energybridge.net/" target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/energybridge.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://atelier-mag.com" target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/logo6.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://chordz.net" target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/logo7.svg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <a href="https://fivestarstours.com" target="_blank">
-                                <div class="single-brand-item d-table">
-                                    <div class="d-table-cell text-center">
-                                        <img src="img/brands/logo9.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                <div class="terminal-content">
+                    <div class="terminal-line">
+                        <span class="prompt" aria-hidden="true">$</span>
+                        <span class="cmd">whoami</span>
                     </div>
-                </div>
-                <div class="offset-lg-2 col-lg-4 col-md-6">
-                    <div class="client-info">
-                        <div class="d-flex mb-50">
-                            <span class="lage"><script>document.write(new Date().getFullYear() - new Date('1/1/2014').getFullYear());</script></span>
-                            <span class="smll">Years of Experience</span>
-                        </div>
-                        <div class="call-now d-flex">
-                            <div>
-                                <a href="tel:0096171321357"><span class="fa fa-phone"></span></a>
-                            </div>
-                            <div class="ml-15">
-                                <p><a href="tel:0096171321357">call now </a></p>
-                                <h3>(+961)-71-321357</h3>
-                            </div>
-                        </div>
+                    <div class="terminal-line">
+                        <span class="output">Hussein Al Mawla</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt" aria-hidden="true">$</span>
+                        <span class="cmd">cat role.txt</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output">Senior Software Engineer</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt" aria-hidden="true">$</span>
+                        <span class="cmd">ls skills/</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output"><span class="highlight">web/</span>  <span class="highlight">native/</span>  <span class="highlight">hybrid/</span>  <span class="highlight">qa/</span></span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt" aria-hidden="true">$</span>
+                        <span class="cmd">uptime --since 2014</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output"><span id="years-exp-terminal"></span> years of building &amp; shipping</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt" aria-hidden="true">$</span>
+                        <span class="typing-cursor" aria-hidden="true"></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--================ End Brand Area =================-->
 
-<!--================ Start Features Area =================-->
-<section class="features_area">
-    <div id="services" class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="main_title">
-                    <h2>service offers </h2>
-                    <p>
-                        Some Services I offer for all kinds of businesses:
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row feature_inner">
-            <div class="col-lg-3 col-md-6">
-                <div class="feature_item">
-                    <img src="img/services/s1.png" alt="">
-                    <h4>App development</h4>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature_item">
-                    <img src="img/services/s2.png" alt="">
-                    <h4>UI/UX design</h4>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature_item">
-                    <img src="img/services/s3.png" alt="">
-                    <h4>Web development</h4>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature_item">
-                    <img src="img/services/s4.png" alt="">
-                    <h4>seo optimization</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================ End Features Area =================-->
-
-
-<!--================Footer Area =================-->
-<footer class="footer_area">
+<!-- ============ About Section ============ -->
+<section class="section" id="about" aria-label="About me">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="footer_top flex-column">
-                    <div class="footer_logo">
-                        <a href="#">
-                            <img src="img/default_cropped_small.png" alt="">
-                        </a>
-                        <h4>Follow Me</h4>
-                    </div>
-                    <div class="footer_social">
-                        <a href="https://www.facebook.com/hsynmawla" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/hmawla.dev/" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/hmawla/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/hmawla" target="_blank"><i class="fa fa-github"></i></a>
-                    </div>
+        <div class="section-title reveal">
+            <span class="terminal-label">About</span>
+            <h2>Let me Introduce Myself</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-image-wrapper reveal">
+                <img src="img/about-us.png" alt="Hussein Al Mawla — About" loading="lazy" width="480" height="480">
+            </div>
+            <div class="about-text reveal">
+                <p>
+                    I am a full stack developer who handles projects in almost any domain; bearing knowledge in
+                    web, native, and hybrid development with expert quality assurance.
+                </p>
+                <p>
+                    I started learning and understanding computers a long time ago, until I found my passion in
+                    development. With time, I was able to develop my skills and refine them, which allowed me to
+                    start pursuing my own projects full time.
+                    So far, I've created and developed multiple high-budget websites and apps. You can view these
+                    apps in my portfolio.
+                </p>
+                <a href="HusseinAlMawla-CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ Portfolio / Brands Section ============ -->
+<section class="section" id="portfolio" aria-label="Portfolio and clients">
+    <div class="container">
+        <div class="section-title reveal">
+            <span class="terminal-label">Portfolio</span>
+            <h2>Projects &amp; Clients</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="brands-grid reveal">
+                <a href="https://play.google.com/store/apps/details?id=com.softrasys.eyemanager.app" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="Softrasys">
+                    <img src="img/brands/softrasys.png" alt="Softrasys" loading="lazy">
+                </a>
+                <a href="https://teliaplus.com" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="Telia Plus">
+                    <img src="img/brands/telia-logo.png" alt="Telia Plus" loading="lazy">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.classmobileapp.android&hl=en&gl=US&pli=1" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="Class Mobile App">
+                    <img src="img/brands/logo5.png" alt="Class Mobile App" loading="lazy">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=app.picwallet.android" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="PiC Wallet">
+                    <img src="img/brands/PiC.png" alt="PiC Wallet" loading="lazy">
+                </a>
+                <a href="https://theconceptmart.com" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="The Concept Mart">
+                    <img src="img/brands/theconcept.png" alt="The Concept Mart" loading="lazy">
+                </a>
+                <a href="https://energybridge.net/" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="Energy Bridge">
+                    <img src="img/brands/energybridge.png" alt="Energy Bridge" loading="lazy">
+                </a>
+                <a href="https://atelier-mag.com" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="Atelier Magazine">
+                    <img src="img/brands/logo6.png" alt="Atelier Magazine" loading="lazy">
+                </a>
+                <a href="https://chordz.net" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="Chordz">
+                    <img src="img/brands/logo7.svg" alt="Chordz" loading="lazy">
+                </a>
+                <a href="https://fivestarstours.com" target="_blank" rel="noopener noreferrer" class="brand-card glass" aria-label="Five Stars Tours">
+                    <img src="img/brands/logo9.png" alt="Five Stars Tours" loading="lazy">
+                </a>
+            </div>
+            <div class="portfolio-stats reveal">
+                <div class="stat-block glass">
+                    <div class="stat-number" id="years-exp"></div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="contact-block glass">
+                    <a href="tel:+96171321357" aria-label="Call Hussein Al Mawla">
+                        <span class="phone-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </span>
+                        <span>
+                            <span class="phone-label">Call now</span>
+                            <span class="phone-number">(+961) 71 321 357</span>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="row footer_bottom justify-content-center">
-            <p class="col-lg-8 col-sm-12 footer-text">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                All Rights Reserved <br>
-                <small><a href="https://untitledlb.com/" target="_blank">Powered by <img data-v-057b1d0d=""
-                                                                         src="https://untitled-developers-public.s3.eu-west-3.amazonaws.com/public/CopyRighLogo.png"
-                                                                         alt=""
-                                                                         style="object-fit: contain; height: 12px; width: auto;"></a>
+    </div>
+</section>
+
+<!-- ============ Services Section ============ -->
+<section class="section services-section" id="services" aria-label="Services offered">
+    <div class="container">
+        <div class="section-title section-title--centered reveal">
+            <span class="terminal-label terminal-label--centered">Services</span>
+            <h2>Service Offers</h2>
+            <p class="section-description">
+                Some Services I offer for all kinds of businesses:
+            </p>
+        </div>
+        <div class="services-grid reveal">
+            <div class="service-card glass">
+                <div class="service-icon">
+                    <img src="img/services/s1.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <h4>App Development</h4>
+                <div class="service-tag">mobile · native · hybrid</div>
+            </div>
+            <div class="service-card glass">
+                <div class="service-icon">
+                    <img src="img/services/s2.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <h4>UI/UX Design</h4>
+                <div class="service-tag">interfaces · prototypes · ux</div>
+            </div>
+            <div class="service-card glass">
+                <div class="service-icon">
+                    <img src="img/services/s3.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <h4>Web Development</h4>
+                <div class="service-tag">frontend · backend · fullstack</div>
+            </div>
+            <div class="service-card glass">
+                <div class="service-icon">
+                    <img src="img/services/s4.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <h4>SEO Optimization</h4>
+                <div class="service-tag">rankings · traffic · growth</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <a href="#home" aria-label="H.Mawla — Home">
+                    <img src="img/default_cropped_small.png" alt="H.Mawla logo" width="120" height="36" loading="lazy">
+                </a>
+            </div>
+            <h4>Follow Me</h4>
+            <nav class="footer-social" aria-label="Social media links">
+                <a href="https://www.facebook.com/hsynmawla" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/hmawla.dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/hmawla/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://github.com/hmawla" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                </a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                Copyright &copy; <span id="current-year"></span> Hussein Al Mawla. All Rights Reserved.
+                <br>
+                <small>
+                    <a href="https://untitledlb.com/" target="_blank" rel="noopener noreferrer">Powered by
+                        <img src="https://untitled-developers-public.s3.eu-west-3.amazonaws.com/public/CopyRighLogo.png" alt="Untitled Developers" class="powered-by-logo" loading="lazy" width="48" height="12">
+                    </a>
                 </small>
-
             </p>
         </div>
     </div>
 </footer>
-<!--================End Footer Area =================-->
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/stellar.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-<script src="vendors/isotope/isotope-min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="js/mail-script.js"></script>
-<!--gmaps Js-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-<script src="js/gmaps.min.js"></script>
-<script src="js/theme.js"></script>
+<!-- ============ Scripts ============ -->
+<script>
+(function() {
+    'use strict';
+
+    // Dynamic year calculations
+    var startYear = 2014;
+    var currentYear = new Date().getFullYear();
+    var yearsExp = currentYear - startYear;
+
+    var yearsExpEl = document.getElementById('years-exp');
+    if (yearsExpEl) yearsExpEl.textContent = yearsExp;
+
+    var yearsExpTermEl = document.getElementById('years-exp-terminal');
+    if (yearsExpTermEl) yearsExpTermEl.textContent = yearsExp;
+
+    var currentYearEl = document.getElementById('current-year');
+    if (currentYearEl) currentYearEl.textContent = currentYear;
+
+    // Navbar scroll effect
+    var navHeader = document.getElementById('nav-header');
+    function onScroll() {
+        if (window.scrollY > 40) {
+            navHeader.classList.add('scrolled');
+        } else {
+            navHeader.classList.remove('scrolled');
+        }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Mobile nav toggle
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', function() {
+        var isOpen = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Close mobile nav on link click
+    var links = navLinks.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    }
+
+    // Active nav link on scroll
+    var sections = document.querySelectorAll('section[id], .section[id]');
+    function updateActiveLink() {
+        var scrollY = window.scrollY + 120;
+        for (var j = sections.length - 1; j >= 0; j--) {
+            var section = sections[j];
+            if (section.offsetTop <= scrollY) {
+                var id = section.getAttribute('id');
+                for (var k = 0; k < links.length; k++) {
+                    links[k].classList.remove('active');
+                    if (links[k].getAttribute('href') === '#' + id) {
+                        links[k].classList.add('active');
+                    }
+                }
+                break;
+            }
+        }
+    }
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+    // Scroll reveal (Intersection Observer)
+    if ('IntersectionObserver' in window) {
+        var revealElements = document.querySelectorAll('.reveal');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(function(el) {
+            observer.observe(el);
+        });
+    } else {
+        // Fallback: show everything immediately
+        var allReveal = document.querySelectorAll('.reveal');
+        for (var m = 0; m < allReveal.length; m++) {
+            allReveal[m].classList.add('visible');
+        }
+    }
+})();
+</script>
+
 </body>
-
 </html>
