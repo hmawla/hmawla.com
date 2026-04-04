@@ -547,7 +547,7 @@
     updateActiveLink();
 
     /* --- Scroll reveal (Intersection Observer) --- */
-    function initReveal(selector, className) {
+    function initReveal(selector) {
         if (!('IntersectionObserver' in window)) {
             var els = document.querySelectorAll(selector);
             for (var m = 0; m < els.length; m++) { els[m].classList.add('visible'); }
