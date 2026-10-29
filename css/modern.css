@@ -108,6 +108,23 @@ ul  { list-style: none; }
 
 .section { padding: 112px 0; position: relative; }
 
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 2000;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: var(--radius-sm);
+  background: var(--bone);
+  color: var(--ink);
+  font-weight: 700;
+}
+.skip-link:focus { top: 16px; color: var(--ink); }
+main:focus { outline: none; }
+
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0;
   margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
@@ -401,7 +418,7 @@ ul  { list-style: none; }
   text-align: center;
   font-family: var(--mono);
   font-size: var(--text-xs);
-  color: rgba(255,255,255,0.42);
+  color: rgba(255,255,255,0.5);  /* 5:1 on the title bar */
 }
 
 .terminal-body {
@@ -440,9 +457,10 @@ ul  { list-style: none; }
   background: var(--orchid-text);
   border-radius: 1px;
   vertical-align: -2px;
-  animation: blink 1.2s step-end infinite;
+  animation: blink 1.2s step-end 4; /* stops within 5s (WCAG 2.2.2) */
 }
 @keyframes blink { 50% { opacity: 0; } }
+.terminal.typing .t-cursor { animation-delay: var(--delay, 0s); }
 
 /* Typing sequence, driven by --delay / --chars set in JS. Text stays in the DOM. */
 .terminal.typing .t-line {
@@ -460,7 +478,10 @@ ul  { list-style: none; }
   animation-delay: var(--delay, 0s);
 }
 .terminal.typing.paused .t-line,
-.terminal.typing.paused .t-cmd { animation-play-state: paused; }
+.terminal.typing.paused .t-cmd,
+.terminal.typing.paused .t-cursor { animation-play-state: paused; }
+/* Once typed, let the command size to its text so user text spacing never clips it (WCAG 1.4.12) */
+.terminal.typing .t-cmd.typed { width: auto; animation: none; }
 @keyframes t-show { to { opacity: 1; } }
 @keyframes t-type { to { width: calc(var(--chars) * 1ch); } }
 

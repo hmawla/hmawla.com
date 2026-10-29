@@ -89,6 +89,8 @@
 
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- ============================================================
      NAVIGATION
      ============================================================ -->
@@ -113,7 +115,7 @@
     </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
 <!-- ============================================================
      HERO
@@ -518,6 +520,9 @@
             }
         });
         term.classList.add('typing');
+        term.addEventListener('animationend', function (e) {
+            if (e.animationName === 't-type') e.target.classList.add('typed');
+        });
 
         if ('IntersectionObserver' in window) {
             term.classList.add('paused');
@@ -582,6 +587,11 @@
     for (var i = 0; i < allLinks.length; i++) {
         allLinks[i].addEventListener('click', closeNav);
     }
+    navLinks.addEventListener('focusout', function (e) {
+        if (navLinks.classList.contains('open') && !navLinks.contains(e.relatedTarget) && e.relatedTarget !== navToggle) {
+            closeNav();
+        }
+    });
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && navLinks.classList.contains('open')) {
             closeNav();
