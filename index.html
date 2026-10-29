@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>document.documentElement.classList.add('js');</script>
 
     <!-- Primary Meta Tags -->
     <title>Hussein Al Mawla | Senior Software Engineer</title>
@@ -36,8 +35,8 @@
     <link rel="icon"             href="img/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-    <!-- Fonts: Inter + JetBrains Mono (self-hosted, see css/modern.css) -->
-    <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Fonts: Schibsted Grotesk + JetBrains Mono (self-hosted, see css/modern.css) -->
+    <link rel="preload" href="fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Stylesheet -->
@@ -91,13 +90,11 @@
 <body>
 
 <!-- ============================================================
-     NAVIGATION — Floating Liquid Glass Pill
+     NAVIGATION
      ============================================================ -->
 <header class="nav-header" id="nav-header" role="banner">
     <div class="container">
         <nav class="nav-inner" aria-label="Main navigation">
-
-            <!-- CSS Logo: white H + gradient dot + white mawla -->
             <a href="#home" class="nav-logo" aria-label="H.Mawla home">
                 <span class="logo-h">H</span><span class="logo-dot">.</span><span class="logo-name">mawla</span>
             </a>
@@ -107,11 +104,10 @@
             </button>
 
             <div class="nav-links" id="nav-links">
-                <a href="#home" class="active">home</a>
-                <a href="#about">about</a>
-                <a href="#portfolio">portfolio</a>
-                <a href="#services">services</a>
-                <a href="#contact">contact</a>
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
             </div>
         </nav>
     </div>
@@ -120,43 +116,32 @@
 <main id="main">
 
 <!-- ============================================================
-     HERO SECTION
+     HERO
      ============================================================ -->
 <section class="hero section" id="home" aria-label="Introduction">
-    <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
-    <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
 
     <div class="container">
         <div class="hero-grid">
 
-            <!-- Left: Content -->
-            <div class="hero-content reveal">
-
-                <h1>Hussein Al Mawla</h1>
-
-                <p class="hero-role">Senior Software Engineer</p>
-
-                <p class="hero-bio">
-                    I build web, mobile, and hybrid apps end to end, and I test
-                    what I ship.
-                </p>
+            <div class="hero-content">
+                <h1>Hussein Al&nbsp;Mawla</h1>
+                <p class="hero-role">Senior software engineer in Lebanon</p>
+                <p class="hero-bio">I build web, mobile, and hybrid apps end to end, and I test what I ship.</p>
 
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        Get in touch
-                    </a>
+                    <a href="#contact" class="btn btn-primary">Get in touch</a>
                     <a href="HusseinAlMawla-CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Download CV
                     </a>
                 </div>
             </div>
 
-            <!-- Right: Terminal -->
-            <div class="terminal glass reveal">
-                <div class="terminal-chrome">
-                    <div class="t-dots" aria-hidden="true">
+            <!-- The one loud element: types itself out once; ls work/ links to each project -->
+            <div class="terminal glass" id="terminal">
+                <div class="terminal-chrome" aria-hidden="true">
+                    <div class="t-dots">
                         <span class="t-dot red"></span>
                         <span class="t-dot yellow"></span>
                         <span class="t-dot green"></span>
@@ -164,42 +149,20 @@
                     <div class="t-titlebar">hussein@hmawla: ~</div>
                 </div>
                 <div class="terminal-body">
-                    <div class="t-line">
-                        <span class="t-prompt" aria-hidden="true">$</span>
-                        <span class="t-cmd">whoami</span>
-                    </div>
-                    <div class="t-line t-out">Hussein Al Mawla</div>
+                    <div class="t-line"><span class="t-prompt" aria-hidden="true">$</span><span class="t-cmd">whoami</span></div>
+                    <div class="t-line t-out t-gap">Hussein Al Mawla</div>
 
-                    <div class="t-line">
-                        <span class="t-prompt" aria-hidden="true">$</span>
-                        <span class="t-cmd">cat location.txt</span>
-                    </div>
-                    <div class="t-line t-out">Lebanon</div>
+                    <div class="t-line"><span class="t-prompt" aria-hidden="true">$</span><span class="t-cmd">uptime --since 2014</span></div>
+                    <div class="t-line t-out t-gap"><span id="years-exp-terminal">12</span> years of building &amp; shipping</div>
 
-                    <div class="t-line">
-                        <span class="t-prompt" aria-hidden="true">$</span>
-                        <span class="t-cmd">ls skills/</span>
-                    </div>
-                    <div class="t-line t-out">
-                        <span class="t-dir">web/</span>&nbsp;&nbsp;
-                        <span class="t-dir">native/</span>&nbsp;&nbsp;
-                        <span class="t-dir">hybrid/</span>&nbsp;&nbsp;
-                        <span class="t-dir">qa/</span>
+                    <div class="t-line"><span class="t-prompt" aria-hidden="true">$</span><span class="t-cmd">ls work/</span></div>
+                    <div class="t-line t-out t-gap">
+                        <a href="#work-class">class-mobile-app/</a>
+                        <a href="#work-telia">telia-plus/</a>
+                        <a href="#work-concept">the-concept-mart/</a>
                     </div>
 
-                    <div class="t-line">
-                        <span class="t-prompt" aria-hidden="true">$</span>
-                        <span class="t-cmd">uptime --since 2014</span>
-                    </div>
-                    <div class="t-line t-out">
-                        <span id="years-exp-terminal">12</span>
-                        <span> years of building &amp; shipping</span>
-                    </div>
-
-                    <div class="t-line">
-                        <span class="t-prompt" aria-hidden="true">$</span>
-                        <span class="t-cursor" aria-hidden="true"></span>
-                    </div>
+                    <div class="t-line"><span class="t-prompt" aria-hidden="true">$</span><span class="t-cursor" aria-hidden="true"></span></div>
                 </div>
             </div>
 
@@ -208,27 +171,49 @@
 </section>
 
 <!-- ============================================================
-     ABOUT SECTION
+     ABOUT
      ============================================================ -->
-<section class="section" id="about" aria-label="About me">
+<section class="section" id="about" aria-labelledby="about-title">
     <div class="container">
-        <div class="section-title reveal">
-            <span class="section-label">About</span>
-            <h2>About Me</h2>
-        </div>
-
         <div class="about-grid">
 
-            <!-- Illustration: web + mobile + QA, built in the page's glass style -->
-            <div class="about-visual reveal" aria-hidden="true">
-                <div class="av-browser glass">
+            <div class="about-content">
+                <div class="section-head section-head--stacked">
+                    <h2 id="about-title">About me</h2>
+                </div>
+                <p>
+                    I'm a full stack developer working across web, native, and hybrid platforms, and I've
+                    been shipping software since 2014. I handle the backend, the frontend, and the testing
+                    that keeps both working.
+                </p>
+                <p>
+                    I got into computers early and turned it into a career. Since then I've built products
+                    ranging from mobile wallets and e-commerce to magazines and travel.
+                </p>
+
+                <dl class="stack-list">
+                    <div class="stack-row"><dt>Frontend</dt><dd>React, Vue, Angular</dd></div>
+                    <div class="stack-row"><dt>Mobile</dt><dd>Flutter, React Native</dd></div>
+                    <div class="stack-row"><dt>Backend</dt><dd>Laravel, PHP, Node.js, Python</dd></div>
+                    <div class="stack-row"><dt>Testing</dt><dd>Jest, Cypress, Appium</dd></div>
+                </dl>
+
+                <a href="HusseinAlMawla-CV.pdf" class="btn btn-ghost about-cv" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download CV
+                </a>
+            </div>
+
+            <!-- Illustration: web + mobile + testing (decorative) -->
+            <div class="about-visual" aria-hidden="true">
+                <div class="av-browser">
                     <div class="terminal-chrome">
                         <div class="t-dots">
                             <span class="t-dot red"></span>
                             <span class="t-dot yellow"></span>
                             <span class="t-dot green"></span>
                         </div>
-                        <div class="av-url">hmawla.com</div>
+                        <div class="av-url"></div>
                     </div>
                     <div class="av-browser-body">
                         <div class="av-bar av-bar--accent" style="width:46%"></div>
@@ -240,7 +225,7 @@
                     </div>
                 </div>
 
-                <div class="av-phone glass">
+                <div class="av-phone">
                     <div class="av-notch"></div>
                     <div class="av-balance"></div>
                     <div class="av-grid"><span></span><span></span><span></span><span></span></div>
@@ -249,53 +234,10 @@
                     <div class="av-cta"></div>
                 </div>
 
-                <div class="av-badge av-badge--tests glass">
+                <div class="av-badge">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    tests passed
+                    Tests passed
                 </div>
-
-                <div class="av-badge av-badge--years glass">
-                    <span class="stat-number" id="years-exp">12+</span>
-                    <span class="stat-label">years shipping</span>
-                </div>
-            </div>
-
-            <!-- Text + Tech Stack -->
-            <div class="about-content reveal">
-                <p>
-                    I'm a full stack developer working across web, native, and hybrid platforms, and I've
-                    been shipping software since 2014. I handle the backend, the frontend, and the testing
-                    that keeps both working.
-                </p>
-                <p>
-                    I got into computers early and turned it into a career. Since then I've built products
-                    ranging from mobile wallets and e-commerce to magazines and travel.
-                </p>
-
-                <!-- Tech Stack -->
-                <dl class="stack-list">
-                    <div class="stack-row">
-                        <dt>Frontend</dt>
-                        <dd><span class="skill-badge">React</span><span class="skill-badge">Vue</span><span class="skill-badge">Angular</span></dd>
-                    </div>
-                    <div class="stack-row">
-                        <dt>Mobile</dt>
-                        <dd><span class="skill-badge">Flutter</span><span class="skill-badge">React Native</span></dd>
-                    </div>
-                    <div class="stack-row">
-                        <dt>Backend</dt>
-                        <dd><span class="skill-badge">Laravel</span><span class="skill-badge">PHP</span><span class="skill-badge">Node.js</span><span class="skill-badge">Python</span></dd>
-                    </div>
-                    <div class="stack-row">
-                        <dt>QA</dt>
-                        <dd><span class="skill-badge">Jest</span><span class="skill-badge">Cypress</span><span class="skill-badge">Appium</span></dd>
-                    </div>
-                </dl>
-
-                <a href="HusseinAlMawla-CV.pdf" class="btn btn-ghost about-cv" target="_blank" rel="noopener">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Download CV
-                </a>
             </div>
 
         </div>
@@ -303,117 +245,110 @@
 </section>
 
 <!-- ============================================================
-     PORTFOLIO SECTION
+     WORK
      ============================================================ -->
-<section class="section" id="portfolio" aria-label="Selected work">
+<section class="section" id="work" aria-labelledby="work-title">
     <div class="container">
-        <div class="section-title reveal">
-            <span class="section-label">Portfolio</span>
-            <h2>Selected Work</h2>
+        <div class="section-head">
+            <h2 id="work-title">Selected work</h2>
+            <p>Apps and platforms I built end to end, from the database to the app stores.</p>
         </div>
 
-        <div class="cases-grid reveal-stagger">
+        <div class="work-list">
 
-            <article class="case-card glass">
-                <div class="case-head">
-                    <img class="case-logo" src="img/brands/class-mobile-app.webp" alt="" loading="lazy" width="320" height="70">
-                    <span class="case-type">iOS &amp; Android</span>
+            <article class="work-row" id="work-class">
+                <img class="work-logo" src="img/brands/class-mobile-app.webp" alt="" loading="lazy" width="320" height="70">
+                <div>
+                    <h3>Class Mobile App</h3>
+                    <p class="work-desc">Top up phone lines, pay phone bills, and renew internet subscriptions from one app.</p>
                 </div>
-                <h3>Class Mobile App</h3>
-                <p class="case-desc">Top up phone lines, pay phone bills, and renew internet subscriptions from one app.</p>
-                <p class="case-role"><span>Role</span> Full stack developer</p>
-                <div class="case-stack"><span class="skill-badge">Flutter</span><span class="skill-badge">Laravel</span></div>
-                <div class="case-links">
-                    <a href="https://apps.apple.com/app/id1541503076" target="_blank" rel="noopener noreferrer">App Store<span class="sr-only"> (Class Mobile App)</span></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.classmobileapp.android" target="_blank" rel="noopener noreferrer">Google Play<span class="sr-only"> (Class Mobile App)</span></a>
+                <p class="work-meta"><strong>Full stack developer</strong>Flutter and Laravel, iOS and Android</p>
+                <div class="work-links">
+                    <a class="text-link" href="https://apps.apple.com/app/id1541503076" target="_blank" rel="noopener noreferrer">App Store<span class="sr-only"> (Class Mobile App)</span></a>
+                    <a class="text-link" href="https://play.google.com/store/apps/details?id=com.classmobileapp.android" target="_blank" rel="noopener noreferrer">Google Play<span class="sr-only"> (Class Mobile App)</span></a>
                 </div>
             </article>
 
-            <article class="case-card glass">
-                <div class="case-head">
-                    <img class="case-logo" src="img/brands/telia.webp" alt="" loading="lazy" width="266" height="76">
-                    <span class="case-type">iOS &amp; Android</span>
+            <article class="work-row" id="work-telia">
+                <img class="work-logo" src="img/brands/telia.webp" alt="" loading="lazy" width="266" height="76">
+                <div>
+                    <h3>Telia Plus</h3>
+                    <p class="work-desc">Recharge Alfa and Touch lines, buy cards, and transfer balance in a few taps.</p>
                 </div>
-                <h3>Telia Plus</h3>
-                <p class="case-desc">Recharge Alfa and Touch lines, buy cards, and transfer balance in a few taps.</p>
-                <p class="case-role"><span>Role</span> Full stack developer</p>
-                <div class="case-stack"><span class="skill-badge">Flutter</span><span class="skill-badge">Laravel</span></div>
-                <div class="case-links">
-                    <a href="https://apps.apple.com/app/id6450862867" target="_blank" rel="noopener noreferrer">App Store<span class="sr-only"> (Telia Plus)</span></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.teliaplus.app" target="_blank" rel="noopener noreferrer">Google Play<span class="sr-only"> (Telia Plus)</span></a>
-                    <a href="https://teliaplus.com" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (Telia Plus)</span></a>
+                <p class="work-meta"><strong>Full stack developer</strong>Flutter and Laravel, iOS and Android</p>
+                <div class="work-links">
+                    <a class="text-link" href="https://apps.apple.com/app/id6450862867" target="_blank" rel="noopener noreferrer">App Store<span class="sr-only"> (Telia Plus)</span></a>
+                    <a class="text-link" href="https://play.google.com/store/apps/details?id=com.teliaplus.app" target="_blank" rel="noopener noreferrer">Google Play<span class="sr-only"> (Telia Plus)</span></a>
+                    <a class="text-link" href="https://teliaplus.com" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (Telia Plus)</span></a>
                 </div>
             </article>
 
-            <article class="case-card glass">
-                <div class="case-head">
-                    <img class="case-logo" src="img/brands/theconcept.webp" alt="" loading="lazy" width="320" height="83">
-                    <span class="case-type">Web platform</span>
+            <article class="work-row" id="work-concept">
+                <img class="work-logo" src="img/brands/theconcept.webp" alt="" loading="lazy" width="320" height="83">
+                <div>
+                    <h3>The Concept Mart</h3>
+                    <p class="work-desc">Online furniture store with multi-currency and multi-language support.</p>
                 </div>
-                <h3>The Concept Mart</h3>
-                <p class="case-desc">Online furniture store with multi-currency and multi-language support.</p>
-                <p class="case-role"><span>Role</span> Full stack developer</p>
-                <div class="case-stack"><span class="skill-badge">Laravel</span><span class="skill-badge">Vue</span></div>
-                <div class="case-links">
-                    <a href="https://theconceptmart.com" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (The Concept Mart)</span></a>
+                <p class="work-meta"><strong>Full stack developer</strong>Laravel and Vue, web</p>
+                <div class="work-links">
+                    <a class="text-link" href="https://theconceptmart.com" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (The Concept Mart)</span></a>
                 </div>
             </article>
 
         </div>
 
-        <p class="brands-eyebrow reveal">Also shipped</p>
-        <div class="brands-grid reveal-stagger">
+        <div class="shipped">
+            <h3>Also shipped</h3>
+            <div class="brands-grid">
             <a href="https://play.google.com/store/apps/details?id=com.softrasys.eyemanager.app"
                target="_blank" rel="noopener noreferrer"
-               class="brand-card glass">
+               class="brand-card">
                 <img src="img/brands/softrasys.webp" alt="" loading="lazy" width="301" height="96">
                 <span class="brand-name">Softrasys</span>
             </a>
             <a href="https://play.google.com/store/apps/details?id=app.picwallet.android"
                target="_blank" rel="noopener noreferrer"
-               class="brand-card glass">
+               class="brand-card">
                 <img src="img/brands/pic-wallet.webp" alt="" loading="lazy" width="219" height="96">
                 <span class="brand-name">PiC Wallet</span>
             </a>
             <a href="https://energybridge.net/"
                target="_blank" rel="noopener noreferrer"
-               class="brand-card glass">
+               class="brand-card">
                 <img src="img/brands/energybridge.webp" alt="" loading="lazy" width="228" height="96">
                 <span class="brand-name">Energy Bridge</span>
             </a>
             <a href="https://atelier-mag.com"
                target="_blank" rel="noopener noreferrer"
-               class="brand-card glass">
+               class="brand-card">
                 <img src="img/brands/atelier.webp" alt="" loading="lazy" width="264" height="96">
                 <span class="brand-name">Atelier Magazine</span>
             </a>
             <a href="https://chordz.net"
                target="_blank" rel="noopener noreferrer"
-               class="brand-card glass">
+               class="brand-card">
                 <img src="img/brands/chordz.webp" alt="" loading="lazy" width="279" height="96">
                 <span class="brand-name">Chordz</span>
             </a>
             <a href="https://fivestarstours.com"
                target="_blank" rel="noopener noreferrer"
-               class="brand-card glass">
+               class="brand-card">
                 <img src="img/brands/fivestarstours.webp" alt="" loading="lazy" width="92" height="96">
                 <span class="brand-name">Five Stars Tours</span>
             </a>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     SERVICES SECTION
+     SERVICES
      ============================================================ -->
-<section class="section services-section" id="services" aria-label="Services offered">
+<section class="section services-section" id="services" aria-labelledby="services-title">
     <div class="container">
-        <div class="section-title section-title--center reveal">
-            <span class="section-label section-label--center">Services</span>
-            <h2>What I Build</h2>
-            <p class="section-desc section-desc--center">
-                From the first prototype to the production release.
-            </p>
+        <div class="section-head">
+            <h2 id="services-title">What I build</h2>
+            <p>From the first prototype to the production release.</p>
         </div>
 
         <!-- Shared gradient for the service icons -->
@@ -426,9 +361,8 @@
             </defs>
         </svg>
 
-        <div class="services-grid reveal-stagger">
-
-            <div class="service-card glass">
+        <div class="services-grid">
+            <div class="service">
                 <div class="service-icon" aria-hidden="true">
                     <svg viewBox="0 0 48 48">
                         <path class="ic-dim" d="M20 6h-8a4 4 0 0 0-4 4v26a4 4 0 0 0 4 4h8"/>
@@ -440,11 +374,9 @@
                     </svg>
                 </div>
                 <h3>App Development</h3>
-                <p class="service-desc">iOS and Android apps in React Native or Flutter, or fully native when the project needs it.</p>
-                <div class="service-tag">mobile · native · hybrid</div>
+                <p>iOS and Android apps in Flutter or React Native, or fully native when the project needs it.</p>
             </div>
-
-            <div class="service-card glass">
+            <div class="service">
                 <div class="service-icon" aria-hidden="true">
                     <svg viewBox="0 0 48 48">
                         <rect class="ic-dim" x="5" y="7" width="32" height="26" rx="3" stroke-dasharray="3 3"/>
@@ -457,11 +389,9 @@
                     </svg>
                 </div>
                 <h3>UI/UX Design</h3>
-                <p class="service-desc">Wireframes, prototypes, and interfaces designed with the build in mind.</p>
-                <div class="service-tag">interfaces · prototypes · ux</div>
+                <p>Wireframes, prototypes, and interfaces designed with the build in mind.</p>
             </div>
-
-            <div class="service-card glass">
+            <div class="service">
                 <div class="service-icon" aria-hidden="true">
                     <svg viewBox="0 0 48 48">
                         <rect x="4" y="6" width="28" height="24" rx="3"/>
@@ -477,11 +407,9 @@
                     </svg>
                 </div>
                 <h3>Web Development</h3>
-                <p class="service-desc">Full stack web apps in React, Vue, Laravel, and Node.js, from the database to the UI.</p>
-                <div class="service-tag">frontend · backend · fullstack</div>
+                <p>Full stack web apps in React, Vue, Laravel, and Node.js, from the database to the UI.</p>
             </div>
-
-            <div class="service-card glass">
+            <div class="service">
                 <div class="service-icon" aria-hidden="true">
                     <svg viewBox="0 0 48 48">
                         <path d="M7 30a17 17 0 0 1 34 0"/>
@@ -495,55 +423,36 @@
                     </svg>
                 </div>
                 <h3>Technical SEO</h3>
-                <p class="service-desc">Fast pages, clean markup, and structured data that search engines can read.</p>
-                <div class="service-tag">speed · markup · schema</div>
+                <p>Fast pages, clean markup, and structured data that search engines can read.</p>
             </div>
-
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     CONTACT SECTION
+     CONTACT
      ============================================================ -->
-<section class="section" id="contact" aria-label="Contact">
+<section class="section" id="contact" aria-labelledby="contact-title">
     <div class="container">
-        <div class="section-title section-title--center reveal">
-            <span class="section-label section-label--center">Contact</span>
-            <h2>Tell me about your project</h2>
-            <p class="section-desc section-desc--center">
-                Email works best for project details. For a quick question, WhatsApp or call.
-            </p>
+        <div class="section-head">
+            <h2 id="contact-title">Tell me about your project</h2>
+            <p>Email works best for project details. For a quick question, WhatsApp or call.</p>
         </div>
 
-        <div class="contact-grid reveal-stagger">
-            <a href="mailto:info@hmawla.com" class="contact-option glass">
-                <span class="contact-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </span>
-                <span class="contact-label">Email</span>
-                <span class="contact-value">info@hmawla.com</span>
+        <a href="mailto:info@hmawla.com" class="contact-email">info@hmawla.com</a>
+
+        <div class="contact-alt">
+            <a href="https://wa.me/96171321357" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                WhatsApp
             </a>
-            <a href="https://wa.me/96171321357" target="_blank" rel="noopener noreferrer" class="contact-option glass">
-                <span class="contact-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-                </span>
-                <span class="contact-label">WhatsApp</span>
-                <span class="contact-value">Send a message</span>
+            <a href="tel:+96171321357">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                (+961) 71 321 357
             </a>
-            <a href="tel:+96171321357" class="contact-option glass">
-                <span class="contact-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                </span>
-                <span class="contact-label">Call</span>
-                <span class="contact-value">(+961) 71 321 357</span>
-            </a>
-            <a href="https://www.linkedin.com/in/hmawla/" target="_blank" rel="noopener noreferrer" class="contact-option glass">
-                <span class="contact-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                </span>
-                <span class="contact-label">LinkedIn</span>
-                <span class="contact-value">in/hmawla</span>
+            <a href="https://www.linkedin.com/in/hmawla/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
             </a>
         </div>
     </div>
@@ -557,13 +466,11 @@
 <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="footer-inner">
-
-            <!-- CSS Logo (same brand treatment as nav) -->
             <a href="#home" class="footer-logo" aria-label="H.Mawla home">
                 <span class="logo-h">H</span><span class="logo-dot">.</span><span class="logo-name">mawla</span>
             </a>
 
-            <p class="footer-tagline">web · mobile · qa</p>
+            <p class="footer-copy">Copyright &copy; <span id="current-year">2026</span> Hussein Al Mawla</p>
 
             <nav class="footer-social" aria-label="Social media links">
                 <a href="https://www.instagram.com/hmawla.dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -577,53 +484,51 @@
                 </a>
             </nav>
         </div>
-
-        <div class="footer-bottom">
-            <p>Copyright &copy; <span id="current-year">2026</span> Hussein Al Mawla. All rights reserved.</p>
-        </div>
     </div>
 </footer>
 
-<!-- ============================================================
-     SCRIPTS — Inline, no dependencies
-     ============================================================ -->
 <script>
 (function () {
     'use strict';
 
-    /* --- Dynamic year calculations --- */
+    /* --- Dynamic years --- */
     var START_YEAR  = 2014;
     var currentYear = new Date().getFullYear();
-    var yearsExp    = currentYear - START_YEAR;
+    var elYearsTerm = document.getElementById('years-exp-terminal');
+    var elCopyYear  = document.getElementById('current-year');
+    if (elYearsTerm) elYearsTerm.textContent = currentYear - START_YEAR;
+    if (elCopyYear)  elCopyYear.textContent  = currentYear;
 
-    var elYears    = document.getElementById('years-exp');
-    var elYearsTerm= document.getElementById('years-exp-terminal');
-    var elCopyYear = document.getElementById('current-year');
-    if (elYears)    elYears.textContent    = yearsExp + '+';
-    if (elYearsTerm)elYearsTerm.textContent= yearsExp;
-    if (elCopyYear) elCopyYear.textContent = currentYear;
+    /* --- Terminal: type each command once on load (text stays in the DOM) --- */
+    var term = document.getElementById('terminal');
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (term && !reduceMotion) {
+        var delay = 0.35;
+        term.querySelectorAll('.t-line').forEach(function (line) {
+            var cmd = line.querySelector('.t-cmd');
+            line.style.setProperty('--delay', delay + 's');
+            if (cmd) {
+                var chars = cmd.textContent.length;
+                cmd.style.setProperty('--chars', chars);
+                delay += chars * 0.042 + 0.25;
+            } else {
+                delay += 0.12;
+            }
+        });
+        term.classList.add('typing');
+    }
 
-    /* --- Floating nav scroll effect --- */
+    /* --- Nav background on scroll --- */
     var navHeader = document.getElementById('nav-header');
     function updateNav() {
-        if (window.scrollY > 50) {
-            navHeader.classList.add('scrolled');
-        } else {
-            navHeader.classList.remove('scrolled');
-        }
+        navHeader.classList.toggle('scrolled', window.scrollY > 50);
     }
     window.addEventListener('scroll', updateNav, { passive: true });
     updateNav();
 
-    /* --- Mobile nav toggle --- */
+    /* --- Mobile nav --- */
     var navToggle = document.getElementById('nav-toggle');
     var navLinks  = document.getElementById('nav-links');
-
-    navToggle.addEventListener('click', function () {
-        var isOpen = navLinks.classList.toggle('open');
-        navToggle.classList.toggle('open');
-        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
 
     function closeNav() {
         navLinks.classList.remove('open');
@@ -631,7 +536,12 @@
         navToggle.setAttribute('aria-expanded', 'false');
     }
 
-    /* Close mobile nav when a link is clicked, or on Escape */
+    navToggle.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
     var allLinks = navLinks.querySelectorAll('a');
     for (var i = 0; i < allLinks.length; i++) {
         allLinks[i].addEventListener('click', closeNav);
@@ -643,49 +553,21 @@
         }
     });
 
-    /* --- Active nav link on scroll --- */
-    function setActiveLink(id) {
-        for (var k = 0; k < allLinks.length; k++) {
-            allLinks[k].classList.toggle('active', allLinks[k].getAttribute('href') === '#' + id);
-        }
-    }
+    /* --- Active nav link --- */
     if ('IntersectionObserver' in window) {
         var sectionObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
-                if (entry.isIntersecting) setActiveLink(entry.target.id);
+                if (!entry.isIntersecting) return;
+                for (var k = 0; k < allLinks.length; k++) {
+                    allLinks[k].classList.toggle('active', allLinks[k].getAttribute('href') === '#' + entry.target.id);
+                }
             });
         }, { rootMargin: '-45% 0px -50% 0px' });
         document.querySelectorAll('section[id]').forEach(function (el) {
             sectionObserver.observe(el);
         });
     }
-
-    /* --- Scroll reveal (Intersection Observer) --- */
-    function initReveal(selector) {
-        if (!('IntersectionObserver' in window)) {
-            var els = document.querySelectorAll(selector);
-            for (var m = 0; m < els.length; m++) { els[m].classList.add('visible'); }
-            return;
-        }
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.10, rootMargin: '0px 0px -30px 0px' });
-
-        document.querySelectorAll(selector).forEach(function (el) {
-            observer.observe(el);
-        });
-    }
-
-    initReveal('.reveal');
-    initReveal('.reveal-stagger');
-
 }());
 </script>
-
 </body>
 </html>
