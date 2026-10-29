@@ -970,15 +970,15 @@ body::before {
 .service-card:hover::after { opacity: 1; }
 
 .service-icon {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   margin: 0 auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(170,73,199,0.07);
   border: 1px solid rgba(170,73,199,0.15);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   transition: all var(--t);
 }
 .service-card:hover .service-icon {
@@ -987,17 +987,22 @@ body::before {
   box-shadow: 0 4px 22px rgba(170,73,199,0.20);
 }
 
+/* Two-tone line icons: base strokes + gradient accents (#svc-grad in index.html) */
 .service-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 44px;
+  height: 44px;
   fill: none;
   stroke: var(--text-2);
-  stroke-width: 1.75;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: stroke var(--t);
+  transition: stroke var(--t), transform var(--t);
 }
-.service-card:hover .service-icon svg { stroke: var(--purple-text); }
+.service-icon .ic-dim    { stroke: var(--text-3); }
+.service-icon .ic-accent { stroke: url(#svc-grad); stroke-width: 2.4; }
+.service-icon .ic-fill   { fill: url(#svc-grad); stroke: none; }
+.service-card:hover .service-icon svg { stroke: var(--text-1); transform: translateY(-1px); }
+.service-card:hover .service-icon .ic-dim { stroke: var(--text-2); }
 
 .service-card h3 {
   font-size: 1rem;
