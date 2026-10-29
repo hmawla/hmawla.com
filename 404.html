@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Page not found | H.Mawla</title>
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/css/modern.css">
+</head>
+<body>
+<main class="hero section not-found">
+    <div class="container">
+        <div class="terminal glass">
+            <div class="terminal-chrome">
+                <div class="t-dots" aria-hidden="true">
+                    <span class="t-dot red"></span>
+                    <span class="t-dot yellow"></span>
+                    <span class="t-dot green"></span>
+                </div>
+                <div class="t-titlebar">hussein@hmawla: ~</div>
+            </div>
+            <div class="terminal-body">
+                <div class="t-line">
+                    <span class="t-prompt" aria-hidden="true">$</span>
+                    <span class="t-cmd">cd <span id="path"></span></span>
+                </div>
+                <h1 class="t-line t-out">404: no such page</h1>
+                <div class="t-line">
+                    <span class="t-prompt" aria-hidden="true">$</span>
+                    <a href="/" class="t-cmd">cd ~</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script>document.getElementById('path').textContent = location.pathname;</script>
+</body>
+</html>
