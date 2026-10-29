@@ -58,7 +58,6 @@
         "telephone": "+96171321357",
         "address": { "@type": "PostalAddress", "addressCountry": "LB" },
         "sameAs": [
-            "https://www.facebook.com/hsynmawla",
             "https://www.instagram.com/hmawla.dev/",
             "https://www.linkedin.com/in/hmawla/",
             "https://github.com/hmawla"
@@ -112,11 +111,13 @@
                 <a href="#about">about</a>
                 <a href="#portfolio">portfolio</a>
                 <a href="#services">services</a>
-                <a href="mailto:info@hmawla.com">contact</a>
+                <a href="#contact">contact</a>
             </div>
         </nav>
     </div>
 </header>
+
+<main id="main">
 
 <!-- ============================================================
      HERO SECTION
@@ -141,7 +142,7 @@
                 </p>
 
                 <div class="hero-cta">
-                    <a href="mailto:info@hmawla.com" class="btn btn-primary">
+                    <a href="#contact" class="btn btn-primary">
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         Get in touch
                     </a>
@@ -149,15 +150,6 @@
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Download CV
                     </a>
-                </div>
-
-                <div class="hero-skills" aria-label="Core technologies">
-                    <span class="skill-badge">React</span>
-                    <span class="skill-badge">React Native</span>
-                    <span class="skill-badge">Node.js</span>
-                    <span class="skill-badge">Flutter</span>
-                    <span class="skill-badge">Vue</span>
-                    <span class="skill-badge">PHP</span>
                 </div>
             </div>
 
@@ -227,12 +219,48 @@
 
         <div class="about-grid">
 
-            <!-- Image -->
-            <div class="about-image-wrap reveal">
-                <img src="img/about-us.webp" alt="" loading="lazy" width="687" height="631">
+            <!-- Illustration: web + mobile + QA, built in the page's glass style -->
+            <div class="about-visual reveal" aria-hidden="true">
+                <div class="av-browser glass">
+                    <div class="terminal-chrome">
+                        <div class="t-dots">
+                            <span class="t-dot red"></span>
+                            <span class="t-dot yellow"></span>
+                            <span class="t-dot green"></span>
+                        </div>
+                        <div class="av-url">hmawla.com</div>
+                    </div>
+                    <div class="av-browser-body">
+                        <div class="av-bar av-bar--accent" style="width:46%"></div>
+                        <div class="av-bar" style="width:88%"></div>
+                        <div class="av-bar" style="width:72%"></div>
+                        <div class="av-tiles"><span></span><span></span><span></span></div>
+                        <div class="av-bar" style="width:64%"></div>
+                        <div class="av-bar" style="width:80%"></div>
+                    </div>
+                </div>
+
+                <div class="av-phone glass">
+                    <div class="av-notch"></div>
+                    <div class="av-balance"></div>
+                    <div class="av-grid"><span></span><span></span><span></span><span></span></div>
+                    <div class="av-bar" style="width:80%"></div>
+                    <div class="av-bar" style="width:60%"></div>
+                    <div class="av-cta"></div>
+                </div>
+
+                <div class="av-badge av-badge--tests glass">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    tests passed
+                </div>
+
+                <div class="av-badge av-badge--years glass">
+                    <span class="stat-number" id="years-exp">12+</span>
+                    <span class="stat-label">years shipping</span>
+                </div>
             </div>
 
-            <!-- Text + Tech Stack Terminal -->
+            <!-- Text + Tech Stack -->
             <div class="about-content reveal">
                 <p>
                     I'm a full stack developer working across web, native, and hybrid platforms, and I've
@@ -243,9 +271,6 @@
                     I got into computers early and turned it into a career. Since then I've built products
                     ranging from mobile wallets and e-commerce to magazines and travel.
                 </p>
-                <p>
-                    A few of them are listed below.
-                </p>
 
                 <!-- Tech Stack -->
                 <dl class="stack-list" aria-label="Tech stack">
@@ -255,11 +280,11 @@
                     </div>
                     <div class="stack-row">
                         <dt>Mobile</dt>
-                        <dd><span class="skill-badge">React Native</span><span class="skill-badge">Flutter</span></dd>
+                        <dd><span class="skill-badge">Flutter</span><span class="skill-badge">React Native</span></dd>
                     </div>
                     <div class="stack-row">
                         <dt>Backend</dt>
-                        <dd><span class="skill-badge">Node.js</span><span class="skill-badge">PHP</span><span class="skill-badge">Python</span></dd>
+                        <dd><span class="skill-badge">Laravel</span><span class="skill-badge">PHP</span><span class="skill-badge">Node.js</span><span class="skill-badge">Python</span></dd>
                     </div>
                     <div class="stack-row">
                         <dt>QA</dt>
@@ -267,7 +292,7 @@
                     </div>
                 </dl>
 
-                <a href="HusseinAlMawla-CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener" style="margin-top:24px;">
+                <a href="HusseinAlMawla-CV.pdf" class="btn btn-ghost about-cv" target="_blank" rel="noopener">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     Download CV
                 </a>
@@ -278,88 +303,96 @@
 </section>
 
 <!-- ============================================================
-     PORTFOLIO / BRANDS SECTION
+     PORTFOLIO SECTION
      ============================================================ -->
-<section class="section" id="portfolio" aria-label="Portfolio and clients">
+<section class="section" id="portfolio" aria-label="Selected work">
     <div class="container">
         <div class="section-title reveal">
             <span class="section-label">Portfolio</span>
-            <h2>Projects &amp; Clients</h2>
+            <h2>Selected Work</h2>
         </div>
 
-        <div class="portfolio-grid">
+        <div class="cases-grid reveal-stagger">
 
-            <!-- Brand logo grid -->
-            <div>
-                <p class="brands-eyebrow reveal">Companies &amp; apps I've shipped</p>
-                <div class="brands-grid reveal-stagger">
-                    <a href="https://play.google.com/store/apps/details?id=com.softrasys.eyemanager.app"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="Softrasys">
-                        <img src="img/brands/softrasys.webp" alt="Softrasys" loading="lazy" width="301" height="96">
-                    </a>
-                    <a href="https://teliaplus.com"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="Telia Plus">
-                        <img src="img/brands/telia.webp" alt="Telia Plus" loading="lazy" width="266" height="76">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.classmobileapp.android&hl=en&gl=US&pli=1"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="Class Mobile App">
-                        <img src="img/brands/class-mobile-app.webp" alt="Class Mobile App" loading="lazy" width="320" height="70">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=app.picwallet.android"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="PiC Wallet">
-                        <img src="img/brands/pic-wallet.webp" alt="PiC Wallet" loading="lazy" width="219" height="96">
-                    </a>
-                    <a href="https://theconceptmart.com"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="The Concept Mart">
-                        <img src="img/brands/theconcept.webp" alt="The Concept Mart" loading="lazy" width="320" height="83">
-                    </a>
-                    <a href="https://energybridge.net/"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="Energy Bridge">
-                        <img src="img/brands/energybridge.webp" alt="Energy Bridge" loading="lazy" width="228" height="96">
-                    </a>
-                    <a href="https://atelier-mag.com"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="Atelier Magazine">
-                        <img src="img/brands/atelier.webp" alt="Atelier Magazine" loading="lazy" width="264" height="96">
-                    </a>
-                    <a href="https://chordz.net"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="Chordz">
-                        <img src="img/brands/chordz.webp" alt="Chordz" loading="lazy" width="279" height="96">
-                    </a>
-                    <a href="https://fivestarstours.com"
-                       target="_blank" rel="noopener noreferrer"
-                       class="brand-card glass" aria-label="Five Stars Tours">
-                        <img src="img/brands/fivestarstours.webp" alt="Five Stars Tours" loading="lazy" width="92" height="96">
-                    </a>
+            <article class="case-card glass">
+                <div class="case-head">
+                    <img class="case-logo" src="img/brands/class-mobile-app.webp" alt="" loading="lazy" width="320" height="70">
+                    <span class="case-type">iOS &amp; Android</span>
                 </div>
-            </div>
+                <h3>Class Mobile App</h3>
+                <p class="case-desc">Top up phone lines, pay phone bills, and renew internet subscriptions from one app.</p>
+                <p class="case-role"><span>Role</span> Full stack developer</p>
+                <div class="case-stack"><span class="skill-badge">Flutter</span><span class="skill-badge">Laravel</span></div>
+                <div class="case-links">
+                    <a href="https://apps.apple.com/app/id1541503076" target="_blank" rel="noopener noreferrer">App Store<span class="sr-only"> (Class Mobile App)</span></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.classmobileapp.android" target="_blank" rel="noopener noreferrer">Google Play<span class="sr-only"> (Class Mobile App)</span></a>
+                </div>
+            </article>
 
-            <!-- Sidebar: stats + contact -->
-            <div class="portfolio-sidebar reveal">
-                <div class="stat-card glass">
-                    <div class="stat-number" id="years-exp">12+</div>
-                    <div class="stat-label">Years of experience</div>
+            <article class="case-card glass">
+                <div class="case-head">
+                    <img class="case-logo" src="img/brands/telia.webp" alt="" loading="lazy" width="266" height="76">
+                    <span class="case-type">iOS &amp; Android</span>
                 </div>
-                <div class="contact-card glass">
-                    <a href="tel:+96171321357" aria-label="Call Hussein Al Mawla">
-                        <span class="phone-icon" aria-hidden="true">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                        </span>
-                        <span class="phone-meta">
-                            <span class="phone-label">Call now</span>
-                            <span class="phone-number">(+961) 71 321 357</span>
-                        </span>
-                    </a>
+                <h3>Telia Plus</h3>
+                <p class="case-desc">Recharge Alfa and Touch lines, buy cards, and transfer balance in a few taps.</p>
+                <p class="case-role"><span>Role</span> Full stack developer</p>
+                <div class="case-stack"><span class="skill-badge">Flutter</span><span class="skill-badge">Laravel</span></div>
+                <div class="case-links">
+                    <a href="https://apps.apple.com/app/id6450862867" target="_blank" rel="noopener noreferrer">App Store<span class="sr-only"> (Telia Plus)</span></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.teliaplus.app" target="_blank" rel="noopener noreferrer">Google Play<span class="sr-only"> (Telia Plus)</span></a>
+                    <a href="https://teliaplus.com" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (Telia Plus)</span></a>
                 </div>
-            </div>
+            </article>
 
+            <article class="case-card glass">
+                <div class="case-head">
+                    <img class="case-logo" src="img/brands/theconcept.webp" alt="" loading="lazy" width="320" height="83">
+                    <span class="case-type">Web platform</span>
+                </div>
+                <h3>The Concept Mart</h3>
+                <p class="case-desc">Online store with multi-currency and multi-language support.</p>
+                <p class="case-role"><span>Role</span> Full stack developer</p>
+                <div class="case-stack"><span class="skill-badge">Laravel</span><span class="skill-badge">Vue</span></div>
+                <div class="case-links">
+                    <a href="https://theconceptmart.com" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (The Concept Mart)</span></a>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="brands-eyebrow reveal">Also shipped</p>
+        <div class="brands-grid reveal-stagger">
+            <a href="https://play.google.com/store/apps/details?id=com.softrasys.eyemanager.app"
+               target="_blank" rel="noopener noreferrer"
+               class="brand-card glass" aria-label="Softrasys">
+                <img src="img/brands/softrasys.webp" alt="" loading="lazy" width="301" height="96">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=app.picwallet.android"
+               target="_blank" rel="noopener noreferrer"
+               class="brand-card glass" aria-label="PiC Wallet">
+                <img src="img/brands/pic-wallet.webp" alt="" loading="lazy" width="219" height="96">
+            </a>
+            <a href="https://energybridge.net/"
+               target="_blank" rel="noopener noreferrer"
+               class="brand-card glass" aria-label="Energy Bridge">
+                <img src="img/brands/energybridge.webp" alt="" loading="lazy" width="228" height="96">
+            </a>
+            <a href="https://atelier-mag.com"
+               target="_blank" rel="noopener noreferrer"
+               class="brand-card glass" aria-label="Atelier Magazine">
+                <img src="img/brands/atelier.webp" alt="" loading="lazy" width="264" height="96">
+            </a>
+            <a href="https://chordz.net"
+               target="_blank" rel="noopener noreferrer"
+               class="brand-card glass" aria-label="Chordz">
+                <img src="img/brands/chordz.webp" alt="" loading="lazy" width="279" height="96">
+            </a>
+            <a href="https://fivestarstours.com"
+               target="_blank" rel="noopener noreferrer"
+               class="brand-card glass" aria-label="Five Stars Tours">
+                <img src="img/brands/fivestarstours.webp" alt="" loading="lazy" width="92" height="96">
+            </a>
         </div>
     </div>
 </section>
@@ -380,37 +413,37 @@
         <div class="services-grid reveal-stagger">
 
             <div class="service-card glass">
-                <div class="service-icon">
-                    <img src="img/services/s1.png" alt="" loading="lazy" width="63" height="69">
+                <div class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
                 </div>
-                <h4>App Development</h4>
+                <h3>App Development</h3>
                 <p class="service-desc">iOS and Android apps in React Native or Flutter, or fully native when the project needs it.</p>
                 <div class="service-tag">mobile · native · hybrid</div>
             </div>
 
             <div class="service-card glass">
-                <div class="service-icon">
-                    <img src="img/services/s2.png" alt="" loading="lazy" width="69" height="64">
+                <div class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
                 </div>
-                <h4>UI/UX Design</h4>
+                <h3>UI/UX Design</h3>
                 <p class="service-desc">Wireframes, prototypes, and interfaces designed with the build in mind.</p>
                 <div class="service-tag">interfaces · prototypes · ux</div>
             </div>
 
             <div class="service-card glass">
-                <div class="service-icon">
-                    <img src="img/services/s3.png" alt="" loading="lazy" width="64" height="68">
+                <div class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                 </div>
-                <h4>Web Development</h4>
-                <p class="service-desc">Full stack web apps in React, Vue, Node.js, and PHP, from the database to the UI.</p>
+                <h3>Web Development</h3>
+                <p class="service-desc">Full stack web apps in React, Vue, Laravel, and Node.js, from the database to the UI.</p>
                 <div class="service-tag">frontend · backend · fullstack</div>
             </div>
 
             <div class="service-card glass">
-                <div class="service-icon">
-                    <img src="img/services/s4.png" alt="" loading="lazy" width="68" height="68">
+                <div class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg>
                 </div>
-                <h4>SEO Optimization</h4>
+                <h3>SEO Optimization</h3>
                 <p class="service-desc">Technical SEO: fast pages, clean markup, and structured data search engines can read.</p>
                 <div class="service-tag">speed · markup · schema</div>
             </div>
@@ -418,6 +451,54 @@
         </div>
     </div>
 </section>
+
+<!-- ============================================================
+     CONTACT SECTION
+     ============================================================ -->
+<section class="section" id="contact" aria-label="Contact">
+    <div class="container">
+        <div class="section-title section-title--center reveal">
+            <span class="section-label section-label--center">Contact</span>
+            <h2>Tell me about your project</h2>
+            <p class="section-desc section-desc--center">
+                Email works best for project details. For a quick question, WhatsApp or call.
+            </p>
+        </div>
+
+        <div class="contact-grid reveal-stagger">
+            <a href="mailto:info@hmawla.com" class="contact-option glass">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">info@hmawla.com</span>
+            </a>
+            <a href="https://wa.me/96171321357" target="_blank" rel="noopener noreferrer" class="contact-option glass">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                </span>
+                <span class="contact-label">WhatsApp</span>
+                <span class="contact-value">Send a message</span>
+            </a>
+            <a href="tel:+96171321357" class="contact-option glass">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </span>
+                <span class="contact-label">Call</span>
+                <span class="contact-value">(+961) 71 321 357</span>
+            </a>
+            <a href="https://www.linkedin.com/in/hmawla/" target="_blank" rel="noopener noreferrer" class="contact-option glass">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </span>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">in/hmawla</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+</main>
 
 <!-- ============================================================
      FOOTER
@@ -434,9 +515,6 @@
             <p class="footer-tagline">web · mobile · qa</p>
 
             <nav class="footer-social" aria-label="Social media links">
-                <a href="https://www.facebook.com/hsynmawla" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-                </a>
                 <a href="https://www.instagram.com/hmawla.dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 </a>
@@ -450,15 +528,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>
-                Copyright &copy; <span id="current-year">2026</span> Hussein Al Mawla. All rights reserved.
-                <br>
-                <small>
-                    <a href="https://untitledlb.com/" target="_blank" rel="noopener noreferrer">
-                        Powered by <img src="https://untitled-developers-public.s3.eu-west-3.amazonaws.com/public/CopyRighLogo.png" alt="Untitled Developers" class="powered-by-logo" loading="lazy" width="48" height="12">
-                    </a>
-                </small>
-            </p>
+            <p>Copyright &copy; <span id="current-year">2026</span> Hussein Al Mawla. All rights reserved.</p>
         </div>
     </div>
 </footer>
