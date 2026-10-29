@@ -333,36 +333,6 @@ body::before {
   align-items: center;
 }
 
-/* "Available" status badge */
-.hero-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: #70d07a;
-  padding: 6px 14px;
-  background: rgba(39, 201, 63, 0.07);
-  border: 1px solid rgba(39, 201, 63, 0.20);
-  border-radius: 100px;
-  margin-bottom: 22px;
-}
-.hero-status::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #27c93f;
-  box-shadow: 0 0 10px rgba(39,201,63,0.9);
-  animation: pulse-dot 2.2s ease-in-out infinite;
-  flex-shrink: 0;
-}
-@keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 8px  rgba(39,201,63,0.8); }
-  50%       { box-shadow: 0 0 20px rgba(39,201,63,1.0), 0 0 32px rgba(39,201,63,0.35); }
-}
-
 .hero-content h1 {
   font-size: clamp(2.4rem, 5vw, 3.7rem);
   font-weight: 800;
