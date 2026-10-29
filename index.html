@@ -208,11 +208,6 @@
             <div class="about-visual" aria-hidden="true">
                 <div class="av-browser">
                     <div class="terminal-chrome">
-                        <div class="t-dots">
-                            <span class="t-dot red"></span>
-                            <span class="t-dot yellow"></span>
-                            <span class="t-dot green"></span>
-                        </div>
                         <div class="av-url"></div>
                     </div>
                     <div class="av-browser-body">
@@ -439,7 +434,14 @@
             <p>Email works best for project details. For a quick question, WhatsApp or call.</p>
         </div>
 
-        <a href="mailto:info@hmawla.com" class="contact-email">info@hmawla.com</a>
+        <div class="contact-email-row">
+            <a href="mailto:info@hmawla.com" class="contact-email">info@hmawla.com</a>
+            <button type="button" class="btn btn-ghost copy-email" id="copy-email" data-email="info@hmawla.com" hidden>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                <span>Copy email</span>
+            </button>
+            <span class="sr-only" id="copy-status" aria-live="polite"></span>
+        </div>
 
         <div class="contact-alt">
             <a href="https://wa.me/96171321357" target="_blank" rel="noopener noreferrer">
@@ -499,7 +501,7 @@
     if (elYearsTerm) elYearsTerm.textContent = currentYear - START_YEAR;
     if (elCopyYear)  elCopyYear.textContent  = currentYear;
 
-    /* --- Terminal: type each command once on load (text stays in the DOM) --- */
+    /* --- Terminal: type each command once it is on screen (text stays in the DOM) --- */
     var term = document.getElementById('terminal');
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (term && !reduceMotion) {
@@ -516,6 +518,40 @@
             }
         });
         term.classList.add('typing');
+
+        if ('IntersectionObserver' in window) {
+            term.classList.add('paused');
+            var termObserver = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting) {
+                    term.classList.remove('paused');
+                    termObserver.disconnect();
+                }
+            }, { threshold: 0.4 });
+            termObserver.observe(term);
+        }
+    }
+
+    /* --- Copy email (mailto does nothing without a mail app) --- */
+    var copyBtn = document.getElementById('copy-email');
+    if (copyBtn && navigator.clipboard && window.isSecureContext) {
+        var copyLabel  = copyBtn.querySelector('span');
+        var copyStatus = document.getElementById('copy-status');
+        var copyTimer;
+        copyBtn.hidden = false;
+        copyBtn.addEventListener('click', function () {
+            navigator.clipboard.writeText(copyBtn.getAttribute('data-email')).then(function () {
+                copyLabel.textContent = 'Copied';
+                copyStatus.textContent = 'Email copied to clipboard';
+            }, function () {
+                copyLabel.textContent = 'Copy failed';
+                copyStatus.textContent = 'Could not copy the email. Select it and copy it instead.';
+            });
+            clearTimeout(copyTimer);
+            copyTimer = setTimeout(function () {
+                copyLabel.textContent = 'Copy email';
+                copyStatus.textContent = '';
+            }, 2000);
+        });
     }
 
     /* --- Nav background on scroll --- */
