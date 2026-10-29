@@ -64,14 +64,14 @@
         ],
         "knowsAbout": [
             "Web Development", "Mobile App Development",
-            "UI/UX Design", "SEO Optimization",
+            "UI/UX Design", "Technical SEO",
             "Full Stack Development", "Quality Assurance"
         ],
         "makesOffer": [
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development",   "description": "Native and hybrid mobile application development" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design",      "description": "User interface and user experience design" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development",   "description": "Full stack web application development" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization",  "description": "Technical SEO: page speed, clean markup, and structured data" } }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technical SEO",     "description": "Technical SEO: page speed, clean markup, and structured data" } }
         ]
     }
     </script>
@@ -102,7 +102,7 @@
                 <span class="logo-h">H</span><span class="logo-dot">.</span><span class="logo-name">mawla</span>
             </a>
 
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
                 <span></span><span></span><span></span>
             </button>
 
@@ -154,7 +154,7 @@
             </div>
 
             <!-- Right: Terminal -->
-            <div class="terminal glass reveal" aria-label="Terminal-style introduction">
+            <div class="terminal glass reveal">
                 <div class="terminal-chrome">
                     <div class="t-dots" aria-hidden="true">
                         <span class="t-dot red"></span>
@@ -273,7 +273,7 @@
                 </p>
 
                 <!-- Tech Stack -->
-                <dl class="stack-list" aria-label="Tech stack">
+                <dl class="stack-list">
                     <div class="stack-row">
                         <dt>Frontend</dt>
                         <dd><span class="skill-badge">React</span><span class="skill-badge">Vue</span><span class="skill-badge">Angular</span></dd>
@@ -351,7 +351,7 @@
                     <span class="case-type">Web platform</span>
                 </div>
                 <h3>The Concept Mart</h3>
-                <p class="case-desc">Online store with multi-currency and multi-language support.</p>
+                <p class="case-desc">Online furniture store with multi-currency and multi-language support.</p>
                 <p class="case-role"><span>Role</span> Full stack developer</p>
                 <div class="case-stack"><span class="skill-badge">Laravel</span><span class="skill-badge">Vue</span></div>
                 <div class="case-links">
@@ -443,7 +443,7 @@
                 <div class="service-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg>
                 </div>
-                <h3>SEO Optimization</h3>
+                <h3>Technical SEO</h3>
                 <p class="service-desc">Technical SEO: fast pages, clean markup, and structured data search engines can read.</p>
                 <div class="service-tag">speed · markup · schema</div>
             </div>
@@ -574,15 +574,23 @@
         navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    /* Close mobile nav when a link is clicked */
+    function closeNav() {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    /* Close mobile nav when a link is clicked, or on Escape */
     var allLinks = navLinks.querySelectorAll('a');
     for (var i = 0; i < allLinks.length; i++) {
-        allLinks[i].addEventListener('click', function () {
-            navLinks.classList.remove('open');
-            navToggle.classList.remove('open');
-            navToggle.setAttribute('aria-expanded', 'false');
-        });
+        allLinks[i].addEventListener('click', closeNav);
     }
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+            closeNav();
+            navToggle.focus();
+        }
+    });
 
     /* --- Active nav link on scroll --- */
     function setActiveLink(id) {

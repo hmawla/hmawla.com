@@ -184,7 +184,7 @@ body::before {
   max-width: 1160px;
   z-index: 1000;
   border-radius: var(--radius-lg);
-  padding: 13px 28px;
+  padding: 9px 28px;
   background: linear-gradient(135deg,
     rgba(255,255,255,0.07) 0%,
     rgba(255,255,255,0.03) 100%
@@ -232,6 +232,7 @@ body::before {
   align-items: baseline;
   gap: 0;
   line-height: 1;
+  padding: 12px 0;
   transition: opacity var(--t);
 }
 .nav-logo:hover { opacity: 0.85; color: inherit; }
@@ -256,7 +257,10 @@ body::before {
   font-family: var(--mono);
   font-size: 0.80rem;
   color: var(--text-2);
-  padding: 7px 14px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
   border-radius: var(--radius-sm);
   transition: all var(--t);
   position: relative;
@@ -310,7 +314,7 @@ body::before {
 .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 @media (max-width: 768px) {
-  .nav-header { top: 10px; width: calc(100% - 28px); padding: 11px 20px; }
+  .nav-header { top: 10px; width: calc(100% - 28px); padding: 6px 20px; }
   .nav-toggle { display: flex; }
   .nav-links {
     position: fixed;
@@ -321,10 +325,11 @@ body::before {
     flex-direction: column;
     padding: 80px 28px 28px;
     gap: 4px;
-    transition: right var(--t);
+    visibility: hidden;
+    transition: right var(--t), visibility 0s linear var(--t);
     border-left: 1px solid rgba(255,255,255,0.08);
   }
-  .nav-links.open { right: 0; }
+  .nav-links.open { right: 0; visibility: visible; transition: right var(--t); }
   .nav-links a { font-size: 1rem; padding: 12px 16px; width: 100%; }
 }
 
@@ -1084,6 +1089,7 @@ body::before {
   align-items: baseline;
   transition: opacity var(--t);
 }
+.footer-logo { padding: 10px 0; }
 .footer-logo:hover { opacity: 0.80; }
 
 .footer-tagline {
